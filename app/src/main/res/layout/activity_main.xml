@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/soft_pink"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/game_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/black"
+        android:text="@string/game_score"
+        android:textColor="@color/soft_pink"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.tetrisgame.views.GameFrame
+        android:id="@+id/game_container"
+        android:layout_width="@dimen/game_size"
+        android:layout_height="@dimen/game_size"
+        android:layout_marginTop="5dp"
+        android:background="@color/black"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/game_score"/>
+
+    <TextView
+        android:id="@+id/game_status"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/game_over"
+        android:textColor="@color/soft_pink"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="@id/game_container"
+        app:layout_constraintBottom_toBottomOf="@id/game_container"
+        app:layout_constraintStart_toStartOf="@id/game_container"
+        app:layout_constraintEnd_toEndOf="@id/game_container" />
+
+    <Button
+        android:id="@+id/game_ctl_btn"
+        android:layout_width="70dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/game_ctl_bn_bg"
+        android:text="@string/start"
+        android:textColor="@color/soft_pink"
+        android:contentDescription="@string/control_button_desc"
+        app:layout_constraintEnd_toEndOf="@id/game_container"
+        app:layout_constraintTop_toBottomOf="@id/game_container" />
+
+    <Button
+        android:id="@+id/fire_btn"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="@drawable/nav_bn_bg"
+        android:contentDescription="@string/fire_button_desc"
+        app:layout_constraintStart_toEndOf="@id/guideline2"
+        app:layout_constraintTop_toTopOf="@id/up_btn"
+        app:layout_constraintBottom_toBottomOf="@id/down_btn" />
+
+    <Button
+        android:id="@+id/up_btn"
+        style="@style/NavButton"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/nav_bn_bg"
+        android:contentDescription="@string/up_button_desc"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/game_container" />
+
+    <Button
+        android:id="@+id/left_btn"
+        style="@style/NavButton"
+        android:background="@drawable/nav_bn_bg"
+        android:contentDescription="@string/left_button_desc"
+        app:layout_constraintEnd_toStartOf="@id/up_btn"
+        app:layout_constraintTop_toBottomOf="@id/up_btn" />
+
+    <Button
+        android:id="@+id/right_btn"
+        style="@style/NavButton"
+        android:background="@drawable/nav_bn_bg"
+        android:contentDescription="@string/right_button_desc"
+        app:layout_constraintStart_toEndOf="@id/up_btn"
+        app:layout_constraintTop_toBottomOf="@id/up_btn" />
+
+    <Button
+        android:id="@+id/down_btn"
+        style="@style/NavButton"
+        android:background="@drawable/nav_bn_bg"
+        android:contentDescription="@string/down_button_desc"
+        app:layout_constraintStart_toEndOf="@id/left_btn"
+        app:layout_constraintTop_toBottomOf="@id/left_btn" />
+
+    <Button
+        android:id="@+id/playButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="576dp"
+        android:onClick="play"
+        android:textColor="@color/soft_pink"
+        android:background="@color/btn_color"
+        android:text="Прослушать песню"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/pauseButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/pauseButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="576dp"
+        android:textColor="@color/soft_pink"
+        android:background="@color/btn_color"
+        android:onClick="pause"
+        android:text="пауза песни"
+        app:layout_constraintLeft_toRightOf="@id/playButton"
+        app:layout_constraintRight_toLeftOf="@id/stopButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/stopButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="576dp"
+        android:textColor="@color/soft_pink"
+        android:background="@color/btn_color"
+        android:onClick="stop"
+        android:text="завершить песню"
+        app:layout_constraintLeft_toRightOf="@id/pauseButton"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/volumeControl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/btn_color"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playButton" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

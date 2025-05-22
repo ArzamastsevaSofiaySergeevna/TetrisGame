@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TetrisGame</string>
+    <string name="game_score">Счет: 0</string>
+    <string name="game_over">Конец игры</string>
+    <string name="start">Начать</string>
+    <string name="control_button_desc">Кнопка начать или приостановить игру</string>
+    <string name="fire_button_desc">Огонь</string>
+    <string name="up_button_desc">Вверх</string>
+    <string name="left_button_desc">Влево</string>
+    <string name="right_button_desc">Вправо</string>
+    <string name="down_button_desc">Вниз</string>
+
+</resources>
