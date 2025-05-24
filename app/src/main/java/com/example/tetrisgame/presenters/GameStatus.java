@@ -7,11 +7,9 @@ public enum GameStatus {
     PAUSED("ИГРА НА ПАУЗЕ");
 
     private final String value;
-
     GameStatus(String value) {
         this.value = value;
     }
-
     public String getValue() {
         return value;
     }

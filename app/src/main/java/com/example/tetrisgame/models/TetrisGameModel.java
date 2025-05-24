@@ -2,14 +2,12 @@ package com.example.tetrisgame.models;
 
 import android.os.Handler;
 import android.util.Log;
-
 import com.example.tetrisgame.presenters.GameModel;
 import com.example.tetrisgame.presenters.GameTurn;
 import com.example.tetrisgame.presenters.Point;
 import com.example.tetrisgame.presenters.PointType;
 import com.example.tetrisgame.presenters.PresenterCompletableObserver;
 import com.example.tetrisgame.presenters.PresenterObserver;
-
 import java.util.LinkedList;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicBoolean;

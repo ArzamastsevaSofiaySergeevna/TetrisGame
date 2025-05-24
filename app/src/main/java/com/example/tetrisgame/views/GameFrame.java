@@ -7,9 +7,7 @@ import android.graphics.Paint;
 import android.os.Handler;
 import android.util.AttributeSet;
 import android.view.View;
-
 import androidx.annotation.Nullable;
-
 import com.example.tetrisgame.presenters.GameStatus;
 import com.example.tetrisgame.presenters.Point;
 

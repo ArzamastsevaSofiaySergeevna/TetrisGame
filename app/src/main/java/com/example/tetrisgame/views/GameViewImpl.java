@@ -3,7 +3,6 @@ package com.example.tetrisgame.views;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 import com.example.tetrisgame.presenters.GameStatus;
 import com.example.tetrisgame.presenters.GameView;
 import com.example.tetrisgame.presenters.Point;
