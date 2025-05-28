@@ -22,7 +22,6 @@
 
     <com.example.tetrisgame.views.GameFrame
         android:id="@+id/game_container"
-
         android:layout_width="@dimen/game_size"
         android:layout_height="@dimen/game_size"
         android:layout_marginTop="5dp"
